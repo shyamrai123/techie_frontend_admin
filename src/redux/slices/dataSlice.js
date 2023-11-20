@@ -130,6 +130,8 @@ const dataSlice = createSlice({
   },
 });
 
+
+
 export const postData = createAsyncThunk("postData", async (arg) => {
   const token = localStorage.getItem("token");
   const { data } = await axios.post(baseUrl + "/jobs/add", arg, {
